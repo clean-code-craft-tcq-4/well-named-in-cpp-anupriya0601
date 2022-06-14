@@ -1,4 +1,3 @@
-#include "ColorCombination.h"
 #include "test.h"
 
 int main() {
