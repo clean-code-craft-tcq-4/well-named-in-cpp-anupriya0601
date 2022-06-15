@@ -12,14 +12,12 @@ int main() {
 
     // Print Color Code Manual 
     int userInput;
-    while(1) {
-        std::cout<<"Press 1 to print Color Code Manual \nPress 0 to exit"<<std::endl;
-        std::cin>>userInput;
-        if(userInput == 1)
-            printColorCodeManual();
-        else if(userInput == 0)
-            return 0;
-        else
-            std::cout<<"\nWrong Choice\n";
-    }
+    std::cout<<"Press 1 to print Color Code Manual \nPress 0 to exit"<<std::endl;
+    std::cin>>userInput;
+    if(userInput == 1)
+        printColorCodeManual();
+    else if(userInput == 0)
+        return 0;
+    else
+        std::cout<<"\nWrong Choice\n";
 }
