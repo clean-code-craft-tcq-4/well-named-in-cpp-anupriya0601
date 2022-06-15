@@ -1,5 +1,5 @@
-#ifndef COLOR_COMBINATION_H
-#define COLOR_COMBINATION_H
+#ifndef COLORCOMBINATION_H
+#define COLORCOMBINATION_H
 
 #include <iostream>
 
@@ -7,18 +7,10 @@ namespace TelCoColorCoder
 {
     enum MajorColor {WHITE, RED, BLACK, YELLOW, VIOLET};
     enum MinorColor {BLUE, ORANGE, GREEN, BROWN, SLATE};
-
-    const char* MajorColors[] = {
-        "White", "Red", "Black", "Yellow", "Violet"
-    };
-    int MajorColorsCount =
-        sizeof(MajorColors) / sizeof(MajorColors[0]);
-    const char* MinorColors[] = {
-        "Blue", "Orange", "Green", "Brown", "Slate"
-    };
-    int MinorColorsCount =
-        sizeof(MinorColors) / sizeof(MinorColors[0]);
-
+    extern const char* MajorColors[];
+    extern int MajorColorsCount;
+    extern const char* MinorColors[];
+    extern int MinorColorsCount;
     class ColorPair {
         private:
             MajorColor major;

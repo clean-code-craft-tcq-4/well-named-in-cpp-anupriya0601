@@ -1,11 +1,12 @@
 #include "test.h"
 
+using namespace TelCoColorCoder;
 int main() {
-    testNumberToPair(4, TelCoColorCoder::WHITE, TelCoColorCoder::BROWN);
-    testNumberToPair(5, TelCoColorCoder::WHITE, TelCoColorCoder::SLATE);
+    testNumberToPair(4, MajorColor::WHITE, MinorColor::BROWN);
+    testNumberToPair(5, MajorColor::WHITE, MinorColor::SLATE);
 
-    testPairToNumber(TelCoColorCoder::BLACK, TelCoColorCoder::ORANGE, 12);
-    testPairToNumber(TelCoColorCoder::VIOLET, TelCoColorCoder::SLATE, 25);
+    testPairToNumber(MajorColor::BLACK, MinorColor::ORANGE, 12);
+    testPairToNumber(MajorColor::VIOLET, MinorColor::SLATE, 25);
 
     return 0;
 }
