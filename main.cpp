@@ -1,12 +1,25 @@
-#include "test.h"
+#include "TestColorCode.h"
 
-using namespace TelCoColorCoder;
+using namespace ColorCode;
+
 int main() {
-    testNumberToPair(4, MajorColor::WHITE, MinorColor::BROWN);
-    testNumberToPair(5, MajorColor::WHITE, MinorColor::SLATE);
+    std::cout<<"Testing result"<<std::endl;
+    // Unit Test Cases execution
+    testValueToPair(4, primaryColor::WHITE, secondaryColor::BROWN);
+    testValueToPair(5, primaryColor::WHITE, secondaryColor::SLATE);
+    testPairToValue(primaryColor::BLACK, secondaryColor::ORANGE, 12);
+    testPairToValue(primaryColor::VIOLET, secondaryColor::SLATE, 25);
 
-    testPairToNumber(MajorColor::BLACK, MinorColor::ORANGE, 12);
-    testPairToNumber(MajorColor::VIOLET, MinorColor::SLATE, 25);
-
-    return 0;
+    // Print Color Code Manual 
+    int userInput;
+    while(1) {
+        std::cout<<"Press 1 to print Color Code Manual \nPress 0 to exit"<<std::endl;
+        std::cin>>userInput;
+        if(userInput == 1)
+            printColorCodeManual();
+        else if(userInput == 0)
+            return 0;
+        else
+            std::cout<<"\nWrong Choice\n";
+    }
 }
